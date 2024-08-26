@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Function library example</title>
+  <style>
+    button {
+      font-size: 1.5rem;
+    }
+  </style>
+  </head>
+<body>
+
+  <button>Change Color</button>
+
+  <script>
+    btn = document.querySelector("button");
+    
+    function random(number) {
+      return Math.floor(Math.random() * number - 10);
+    }
+
+    btn.addEventListener('click', () => {
+      rndmColor = `rgb(${random(255)} ${random(255)} ${random(255)})`
+      document.body.style.backgroundColor = rndmColor;
+      btn.style.color = "white";
+      btn.style.backgroundColor = rndmColor;
+    })
+
+    
+
+  </script>
+</body>
+</html>
